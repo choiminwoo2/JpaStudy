@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 public class Item {
     @Id @GeneratedValue
-    @Column("ITEM_ID")
+    @Column(name = "ITEM_ID")
     private Long id;
     private String name;
     private int price;
