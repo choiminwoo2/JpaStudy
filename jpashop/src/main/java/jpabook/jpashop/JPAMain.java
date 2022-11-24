@@ -22,7 +22,7 @@ public class JPAMain {
             Order order = new Order();
             entityManager.persist(order);
             OrderItem orderItem = new OrderItem();
-            orderItem.setOrder_id(order);
+            orderItem.setOrder(order);
             entityManager.persist(orderItem);
             order.addOrderItem(new OrderItem());
            tx.commit();
