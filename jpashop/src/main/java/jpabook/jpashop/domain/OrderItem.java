@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +18,7 @@ public class OrderItem {
     private Long id;
 
     @Column(name = "ORDER_ID")
-    private Long member_id;
+    private Order order;
 
     @Column(name = "ITEM_ID")
     private Long item_id;
