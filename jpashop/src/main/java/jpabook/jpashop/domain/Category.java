@@ -24,5 +24,6 @@ public class Category {
             joinColumns = @JoinColumn(name = "CATEGORY_ID"),
             inverseJoinColumns = @JoinColumn(name = "ITEM_ID")
     )
+    //리시트추가
     private List<Item> items = new ArrayList<>();
 }
