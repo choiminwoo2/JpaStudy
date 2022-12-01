@@ -52,14 +52,13 @@ public class Board{
 ## JPA 관계
 
 #### 1 : 다
-
++ @OneToMany
 #### 다 : 일
-
++ @ManyToOne
 #### 일 : 일
-
++ @OneToOne
 #### 다 : 다
-
-
++ @ManyToMany
 
 
 
