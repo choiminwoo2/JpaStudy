@@ -12,16 +12,16 @@ import java.util.List;
 @Table(name = "ORDERS")
 @Getter
 @Setter
-public class Order extends BaseEntity{
+public class Order{
 
     @Id @GeneratedValue
     @Column(name = "ORDER_ID")
     private Long id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DELIVERY_ID")
     private Delivery delivery;
     @OneToMany(mappedBy = "order")
