@@ -15,13 +15,11 @@ public class JpaMain {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
         try {
-            Movie movie = new Movie();
-            movie.setDirector("aaaa");
-            movie.setActor("bbbb");
-            movie.setName("바람과함께사라지다");
-            movie.setPrice(10000);
-
-            entityManager.persist((movie));
+            Member member = new Member();
+            member.setName("hello");
+            member.setAddress(new Address("city","good","goods"));
+            member.setPeriod(new Period());
+            entityManager.persist(member);
 
             entityManager.flush();
             entityManager.clear();

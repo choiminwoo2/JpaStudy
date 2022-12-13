@@ -14,9 +14,16 @@ public class Member {
     @GeneratedValue
     private Long id;
     private String name;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TEAM_ID")
     private Team team;
+
+    @Embedded
+    private Period period;
+
+    @Embedded
+    private Address address;
+
     public Member(){
 
     }
