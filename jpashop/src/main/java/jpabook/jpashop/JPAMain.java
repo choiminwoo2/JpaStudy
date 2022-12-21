@@ -20,9 +20,8 @@ public class JPAMain {
         tx.begin();
         try {
             Member member1 = new Member();
-            member.setU
-           tx.commit();
-        }catch (Exception e){
+            member1.setName("Test");
+
             tx.rollback();
         }finally {
             entityManager.close();
